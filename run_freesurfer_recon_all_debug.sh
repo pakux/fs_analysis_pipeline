@@ -4,7 +4,7 @@
 # This version includes extensive debugging to help locate NIfTI files
 
 # Configuration
-CSV_FILE="top20_worst_progressor_2ycutoff_pst_2z_flair.csv"
+CSV_FILE="top20_worst_progressor_2ycutoff_wst_2z_flair.csv"
 # IMAGE_BASE_PATH="/mnt/radbrain_dl/explainability/worst_progressor_2ycutoff_pst_2z/mspaths2/t1w/sfcn/saliency/magnitude/worst_progressor_2ycutoff_pst_2z_e1000_b16_im96"
 IMAGE_BASE_PATH="/mnt/mspaths_bids/derivatives/reg_to_mni_affine/"
 FREESURFER_IMAGE="freesurfer/freesurfer:7.4.1"
