@@ -25,7 +25,7 @@ while IFS= read -r subject_id; do
   for labelfile in "aparc.a2009s+aseg" "aseg.auto" "aseg.presurf" "brainmask.auto" "T1" "T2" "wm.asegedit" "wm" "wmparc"
   do
       ./mri_convert "${FS_SUBJECTS_DIR}/${subject_id}/mri/${labelfile}.mgz"  "${OUTPUT_DIR}/sub-${subject_id}/sub-${subject_id}_${labelfile}.nii.gz"
-
+      fslreorient2std  "${OUTPUT_DIR}/sub-${subject_id}/sub-${subject_id}_${labelfile}.nii.gz"  "${OUTPUT_DIR}/sub-${subject_id}/sub-${subject_id}_${labelfile}.nii.gz"
       python label2npyspace.py "${OUTPUT_DIR}/sub-${subject_id}/sub-${subject_id}_${labelfile}.nii.gz" "${OUTPUT_DIR}/sub-${subject_id}/sub-${subject_id}_space-numpy_${labelfile}.nii.gz"
 
 
